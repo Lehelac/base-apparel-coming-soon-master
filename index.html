@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+<link rel="stylesheet" href="style.css">
+
+<script> 
+  function validateEmail(emailId)
+  {
+  var mailformat = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+  if(emailId.value.match(mailformat))
+  {
+    alert("Thank You for Subscribing!");
+  document.emailForm.text1.focus();
+  return true;
+  }
+  else
+  {
+  alert("Invalid email address.");
+  document.emailForm.text1.focus();
+  return false;
+  }
+  }    
+  </script> 
+</head>
+
+
+<body>
+  <!-- <div class="maincontainer"> -->
+<!-- <div class="container" style="background-image: url('./images/bg-pattern-desktop.svg');"></div> </div> -->
+ <div class="multi-bg-example">
+  <img src="images/hero-desktop.jpg"  class="image" width="1000" height="800">
+
+  </div>
+
+  <div class="logo"><img src="images/logo.svg" width="120" height="30"</div>
+<div class="words" width="1000" height="800">
+<h1> <span>W E ' R E </span> 
+  <br>C O M I N G <br> S O O N</h1>
+<p>
+    Hello fellow shoppers! We're currently building our new <br>fashion store. 
+  Add your email below to stay up-to-date with<br> announcements and our launch deals.
+</p>
+<br>
+<form name="emailForm" action="/action_page.php" onsubmit="return validateForm()" method="post" required>
+  <label for="email"></label>
+  <div class="col75" width="1000" height="800">
+  <input type="email" id="email" name="email" onfocus="this.value=''" value = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E-mail Address">
+  <input type="submit" id="submit" value = ">" onclick="validateEmail(document.emailForm.email)">
+</div>
+</form>
+
+</div>
+
+  <!-- Email Address -->
+  
+
+
+  <footer>
+    <p class="attribution">
+      Challenge by &nbsp; <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#"> &nbsp;Lehela Campbell</a>.
+    </p>
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
